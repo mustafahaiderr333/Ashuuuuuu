@@ -1,0 +1,722 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4b1028">
+  <title>For My Ayesha ❤️</title>  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">  <style>
+    :root {
+      --wine: #4b1028;
+      --rose: #b94e70;
+      --pink: #f7dce5;
+      --cream: #fff9f5;
+      --gold: #d8b477;
+      --text: #54253a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Poppins", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, #f9dfe7, transparent 45%),
+        linear-gradient(145deg, #fff9f5, #f5d5df);
+      overflow-x: hidden;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .screen {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px 16px;
+    }
+
+    .login-card {
+      width: 100%;
+      max-width: 430px;
+      padding: 38px 25px;
+      text-align: center;
+      border: 1px solid rgba(216, 180, 119, 0.65);
+      border-radius: 25px;
+      background: rgba(255, 249, 245, 0.94);
+      box-shadow: 0 20px 60px rgba(75, 16, 40, 0.13);
+      animation: appear 1s ease both;
+    }
+
+    .heart-icon {
+      font-size: 48px;
+      display: inline-block;
+      animation: heartbeat 1.7s infinite;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    .login-card h1 {
+      margin: 12px 0;
+      color: var(--wine);
+      font-size: clamp(38px, 10vw, 52px);
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      line-height: 1.9;
+      color: #876172;
+    }
+
+    .password-input {
+      display: block;
+      width: 100%;
+      padding: 15px 13px;
+      margin-top: 23px;
+      border: 1px solid #e7b7c7;
+      border-radius: 12px;
+      outline: none;
+      background: white;
+      color: var(--wine);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .password-input:focus {
+      border-color: var(--rose);
+      box-shadow: 0 0 0 3px rgba(185, 78, 112, 0.12);
+    }
+
+    .primary-button {
+      width: 100%;
+      margin-top: 14px;
+      padding: 15px 18px;
+      border: none;
+      border-radius: 12px;
+      color: white;
+      background: linear-gradient(135deg, #7b1d40, #bf5878);
+      cursor: pointer;
+      box-shadow: 0 7px 20px rgba(123, 29, 64, 0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .primary-button:active {
+      transform: scale(0.97);
+    }
+
+    .error-message {
+      min-height: 23px;
+      margin: 10px 0 0;
+      color: #b32950;
+      font-size: 12px;
+    }
+
+    .tiny-note {
+      margin-top: 18px;
+      font-size: 11px;
+      color: #a0808e;
+    }
+
+    /* Main romantic page */
+
+    #lovePage {
+      min-height: 100vh;
+      padding: 25px 16px 60px;
+    }
+
+    .love-container {
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .top-label {
+      color: #a45a75;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-size: 10px;
+      margin: 20px 0 12px;
+    }
+
+    .hero-title {
+      margin: 0;
+      color: var(--wine);
+      font-size: clamp(45px, 10vw, 78px);
+      line-height: 1;
+    }
+
+    .hero-title span {
+      color: var(--rose);
+      font-style: italic;
+    }
+
+    .hero-subtitle {
+      margin: 17px auto 25px;
+      max-width: 460px;
+      font-size: 13px;
+      line-height: 2;
+      color: #8b5c6e;
+    }
+
+    .hero-heart {
+      font-size: 48px;
+      margin: 12px 0 22px;
+      animation: heartbeat 1.7s infinite;
+    }
+
+    .divider {
+      width: 90px;
+      height: 1px;
+      margin: 25px auto;
+      background: var(--gold);
+    }
+
+    .section-heading {
+      margin: 40px 0 20px;
+      color: var(--wine);
+      font-size: clamp(34px, 8vw, 48px);
+    }
+
+    .letter-card {
+      margin: 16px 0;
+      padding: 25px 23px;
+      text-align: left;
+      background: rgba(255, 249, 245, 0.94);
+      border: 1px solid rgba(216, 180, 119, 0.5);
+      border-radius: 17px;
+      box-shadow: 0 8px 25px rgba(75, 16, 40, 0.06);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .letter-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .letter-card h3 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      color: var(--rose);
+    }
+
+    .letter-card p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 2.1;
+      color: #704457;
+      white-space: pre-line;
+    }
+
+    .poetry-card {
+      margin: 22px 0;
+      padding: 28px 18px;
+      border-radius: 18px;
+      background: linear-gradient(140deg, #5c1633, #8b2e50);
+      color: #fff6f5;
+      box-shadow: 0 12px 30px rgba(75, 16, 40, 0.16);
+    }
+
+    .poetry-card h3 {
+      font-size: 34px;
+      margin: 0 0 16px;
+      color: #f0d29b;
+    }
+
+    .poetry-card p {
+      margin: 0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(20px, 5vw, 27px);
+      line-height: 1.8;
+    }
+
+    .interactive-section {
+      margin: 45px 0;
+      padding: 28px 20px;
+      border-radius: 20px;
+      border: 1px solid rgba(216, 180, 119, 0.6);
+      background: rgba(255, 249, 245, 0.9);
+    }
+
+    .interactive-section h2 {
+      font-size: 37px;
+      color: var(--wine);
+      margin: 0 0 10px;
+    }
+
+    .interactive-section p {
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .love-button {
+      border: 1px solid var(--gold);
+      border-radius: 30px;
+      padding: 14px 24px;
+      margin: 10px 5px;
+      color: var(--wine);
+      background: #fff;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .love-button:active {
+      transform: scale(0.95);
+    }
+
+    #loveMessage {
+      min-height: 50px;
+      margin-top: 15px;
+      color: var(--rose);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 27px;
+    }
+
+    .final-card {
+      margin-top: 45px;
+      padding: 34px 22px;
+      border-radius: 22px;
+      background: linear-gradient(145deg, #4b1028, #792444);
+      color: #fff8f5;
+      box-shadow: 0 15px 35px rgba(75, 16, 40, 0.2);
+    }
+
+    .final-card h2 {
+      margin: 0 0 15px;
+      color: #f0d29b;
+      font-size: clamp(39px, 9vw, 57px);
+    }
+
+    .final-card p {
+      font-size: 13px;
+      line-height: 2.1;
+    }
+
+    .signature {
+      margin-top: 25px;
+      color: #f0d29b;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 28px;
+      font-style: italic;
+    }
+
+    footer {
+      padding: 35px 10px 0;
+      color: #a16c80;
+      font-size: 11px;
+      line-height: 2;
+    }
+
+    /* Floating hearts */
+
+    .floating-heart {
+      position: fixed;
+      bottom: -40px;
+      z-index: 5;
+      pointer-events: none;
+      animation: floatUp linear forwards;
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.8;
+      }
+      to {
+        transform: translateY(-115vh) rotate(35deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      15% { transform: scale(1.13); }
+      30% { transform: scale(1); }
+      45% { transform: scale(1.09); }
+      60% { transform: scale(1); }
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .login-card {
+        padding: 32px 21px;
+      }
+
+      .letter-card {
+        padding: 22px 18px;
+      }
+
+      #lovePage {
+        padding-left: 13px;
+        padding-right: 13px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style></head><body>  <!-- PASSWORD SCREEN -->  <main id="loginScreen" class="screen">
+    <section class="login-card">
+      <div class="heart-icon" aria-hidden="true">❤️</div>  <p class="top-label">A little secret for you</p>
+
+  <h1>For My<br>Beautiful Ayesha</h1>
+
+  <p class="subtitle">
+    Some feelings are too special for ordinary words.<br>
+    Enter our little secret to open my heart.
+  </p>
+
+  <form id="passwordForm">
+    <input
+      id="passwordInput"
+      class="password-input"
+      type="password"
+      placeholder="Enter our secret password"
+      autocomplete="off"
+      aria-label="Secret password"
+      required
+    >
+
+    <button class="primary-button" type="submit">
+      Open My Heart ♡
+    </button>
+  </form>
+
+  <p id="errorMessage" class="error-message" role="status" aria-live="polite"></p>
+
+  <p class="tiny-note">Made with love, just for you ✨</p>
+</section>
+
+  </main>  <!-- ROMANTIC PAGE -->  <main id="lovePage" class="hidden">
+    <div class="love-container">  <p class="top-label">To the one who has my heart</p>
+
+  <h1 class="hero-title">
+    My Dearest<br><span>Ayesha</span>
+  </h1>
+
+  <p class="hero-subtitle">
+    If my heart could speak in a thousand languages,
+    every single one would find its way back to you.
+  </p>
+
+  <div class="hero-heart" aria-hidden="true">❤️</div>
+
+  <div class="divider"></div>
+
+  <h2 class="section-heading">A Few Words From My Heart</h2>
+
+  <!-- LETTER 1 -->
+
+  <section class="letter-card">
+    <h3>My Favourite Person ♡</h3>
+    <p>
+
+Ayesha, آپ میری زندگی کا وہ خوبصورت احساس ہیں جسے الفاظ میں مکمل بیان کرنا ممکن نہیں۔ آپ کی موجودگی میرے عام سے دن کو بھی خاص بنا دیتی ہے۔ آپ کی مسکراہٹ میرے دل کو سکون دیتی ہے، اور آپ سے بات کرنا میرے دن کا سب سے خوبصورت حصہ بن جاتا ہے۔
+
+میں چاہتا ہوں کہ آپ ہمیشہ یہ محسوس کریں کہ آپ میرے لیے کتنی اہم ہیں۔ آپ کی خوشی میرے لیے معنی رکھتی ہے، آپ کے خواب میرے لیے اہم ہیں، اور آپ کے احساسات کی میرے دل میں ہمیشہ قدر رہے گی۔
+</p>
+</section>
+
+  <!-- LETTER 2 -->
+
+  <section class="letter-card">
+    <h3>My Peace, My Happiness ♡</h3>
+    <p>
+
+کبھی کبھی میں سوچتا ہوں کہ زندگی میں کچھ لوگ ہماری دنیا کو کتنی خوبصورتی سے بدل دیتے ہیں۔ آپ میرے لیے اُنہی لوگوں میں سے ہیں۔ آپ سے بات ہو تو دل خوش ہو جاتا ہے، اور آپ کی یاد آئے تو بے اختیار چہرے پر مسکراہٹ آ جاتی ہے۔
+
+میں یہ وعدہ نہیں کرتا کہ ہر دن بالکل آسان ہوگا، لیکن میں یہ ضرور چاہتا ہوں کہ مشکل دنوں میں بھی آپ کو میری طرف سے احترام، خلوص، توجہ اور محبت ملے۔ آپ کی بات سننا، آپ کو سمجھنا اور آپ کے ساتھ خوبصورت یادیں بنانا میرے لیے بہت قیمتی ہے۔
+</p>
+</section>
+
+  <!-- LETTER 3 -->
+
+  <section class="letter-card">
+    <h3>If Only You Could See My Heart ♡</h3>
+    <p>
+
+کاش آپ کبھی میرے دل کو ویسے دیکھ سکیں جیسے میں آپ کو محسوس کرتا ہوں۔ شاید تب آپ کو اندازہ ہو کہ آپ کی ایک چھوٹی سی بات بھی میرے لیے کتنی خاص ہو سکتی ہے۔
+
+آپ میرے لیے صرف ایک خوبصورت نام نہیں ہیں؛ آپ ایک ایسا احساس ہیں جس میں اپنائیت ہے، سکون ہے اور بہت ساری محبت ہے۔ میری خواہش ہے کہ آپ اپنی زندگی میں ہمیشہ خوش رہیں، اپنے خواب پورے کریں اور کبھی اپنی قدر کرنا نہ بھولیں۔ آپ کی خوشی صرف میری خواہش نہیں، میرے دل کی ایک سچی دعا بھی ہے۔
+</p>
+</section>
+
+  <!-- LETTER 4 -->
+
+  <section class="letter-card">
+    <h3>A Promise From My Heart ♡</h3>
+    <p>
+
+میری پیاری عائشہ، میں چاہتا ہوں کہ ہماری کہانی صرف خوبصورت الفاظ تک محدود نہ رہے۔ میں چاہتا ہوں کہ میری باتوں کے ساتھ میرے عمل بھی آپ کو میری محبت کا یقین دلائیں۔
+
+میں آپ کے ساتھ ہنسنا چاہتا ہوں، چھوٹی چھوٹی خوشیاں بانٹنا چاہتا ہوں، آپ کی کامیابیوں پر خوش ہونا چاہتا ہوں اور جب زندگی مشکل لگے تو آپ کی بات توجہ سے سننا چاہتا ہوں۔ میرے لیے محبت کا مطلب صرف کسی کو چاہنا نہیں، بلکہ اُس کی عزت کرنا، اُس کے احساسات سمجھنا اور اُس کی خوشی کی قدر کرنا بھی ہے۔
+
+آپ میرے دل کے بہت قریب ہیں، اور میں دل سے دعا کرتا ہوں کہ آپ کی زندگی محبت، سکون اور خوشیوں سے بھری رہے۔
+</p>
+</section>
+
+  <!-- POETRY -->
+
+  <div class="divider"></div>
+
+  <h2 class="section-heading">A Little Poetry For You</h2>
+
+  <section class="poetry-card">
+    <h3>صرف آپ کے لیے ♡</h3>
+    <p>
+
+آپ کی مسکراہٹ سے روشن میری شام رہے<br>
+آپ کے لبوں پر ہمیشہ خوشیوں کا نام رہے<br>
+دعا ہے ہر خواب آپ کا حقیقت بن جائے<br>
+آپ کے دل کو ہر لمحہ سکون تمام رہے
+</p>
+</section>
+
+  <section class="poetry-card">
+    <h3>میری دعا</h3>
+    <p>
+
+آپ کا ساتھ ہو تو لمحے حسین لگتے ہیں<br>
+آپ کے ذکر سے دل کے موسم رنگین لگتے ہیں<br>
+خدا رکھے آپ کو ہر غم سے دور ہمیشہ<br>
+آپ خوش ہوں تو سب خواب بہترین لگتے ہیں
+</p>
+</section>
+
+  <!-- INTERACTIVE SECTION -->
+
+  <section class="interactive-section">
+    <h2>A Little Surprise ♡</h2>
+
+    <p>
+
+There is something I want to remind you of...
+</p>
+
+    <button id="loveButton" class="love-button" type="button">
+      Tap for Love ❤️
+    </button>
+
+    <button id="kissButton" class="love-button" type="button">
+      Send a Kiss 😘
+    </button>
+
+    <div id="loveMessage" aria-live="polite"></div>
+  </section>
+
+  <!-- FINAL MESSAGE -->
+
+  <section class="final-card">
+    <div style="font-size: 43px;" aria-hidden="true">💗</div>
+
+    <h2>Always Special</h2>
+
+    <p>
+
+My dearest Ayesha,<br>
+if there is one thing I hope you remember after reading this,
+it is that you deserve a love that makes you feel valued,
+respected, understood, and appreciated.
+
+Thank you for being you.
+Thank you for the smiles, the memories, and the little moments
+that become special simply because they include you.
+
+No website could ever hold everything I feel,
+but I hope this little corner of the internet brings a smile to your face.
+</p>
+
+    <div class="signature">
+      With all my love, always ♡
+    </div>
+  </section>
+
+  <footer>
+    Created with love, just for Ayesha ❤️<br>
+    A little page for a very special person.
+  </footer>
+
+</div>
+
+  </main>  <script>
+    "use strict";
+
+    (function () {
+      const PASSWORD = "Tbh for my babe";
+
+      const loginScreen = document.getElementById("loginScreen");
+      const lovePage = document.getElementById("lovePage");
+      const passwordForm = document.getElementById("passwordForm");
+      const passwordInput = document.getElementById("passwordInput");
+      const errorMessage = document.getElementById("errorMessage");
+
+      const loveButton = document.getElementById("loveButton");
+      const kissButton = document.getElementById("kissButton");
+      const loveMessage = document.getElementById("loveMessage");
+
+      const loveMessages = [
+        "آپ میرے لیے بہت خاص ہیں، ہمیشہ۔ ❤️",
+        "آپ کی مسکراہٹ میرے دن کی خوبصورتی ہے۔ 🌹",
+        "میری دعا ہے کہ آپ ہمیشہ خوش رہیں۔ 💗",
+        "آپ کی خوشی میرے دل کے بہت قریب ہے۔ ✨",
+        "If I could choose again, I'd still want to know you. ❤️"
+      ];
+
+      let messageIndex = 0;
+
+      passwordForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const enteredPassword = passwordInput.value;
+
+        if (enteredPassword === PASSWORD) {
+          errorMessage.textContent = "";
+          loginScreen.classList.add("hidden");
+          lovePage.classList.remove("hidden");
+
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+
+          startFloatingHearts();
+          revealLetterCards();
+        } else {
+          errorMessage.textContent =
+            "That isn't our secret password. Try again, my love. ❤️";
+
+          passwordInput.value = "";
+          passwordInput.focus();
+        }
+      });
+
+      function revealLetterCards() {
+        const cards = document.querySelectorAll(".letter-card");
+
+        if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          }, {
+            threshold: 0.12
+          });
+
+          cards.forEach(function (card) {
+            observer.observe(card);
+          });
+        } else {
+          cards.forEach(function (card) {
+            card.classList.add("visible");
+          });
+        }
+      }
+
+      function createFloatingHeart() {
+        if (lovePage.classList.contains("hidden")) {
+          return;
+        }
+
+        const heart = document.createElement("span");
+        heart.className = "floating-heart";
+
+        const symbols = ["♥", "♡", "💗", "💕"];
+        heart.textContent =
+          symbols[Math.floor(Math.random() * symbols.length)];
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (12 + Math.random() * 20) + "px";
+        heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+        heart.style.opacity = String(0.4 + Math.random() * 0.5);
+
+        document.body.appendChild(heart);
+
+        window.setTimeout(function () {
+          heart.remove();
+        }, 11000);
+      }
+
+      let heartTimer = null;
+
+      function startFloatingHearts() {
+        if (heartTimer !== null) {
+          return;
+        }
+
+        for (let i = 0; i < 8; i++) {
+          window.setTimeout(createFloatingHeart, i * 180);
+        }
+
+        heartTimer = window.setInterval(createFloatingHeart, 650);
+      }
+
+      loveButton.addEventListener("click", function () {
+        loveMessage.textContent = loveMessages[messageIndex];
+
+        messageIndex = (messageIndex + 1) % loveMessages.length;
+
+        for (let i = 0; i < 5; i++) {
+          window.setTimeout(createFloatingHeart, i * 120);
+        }
+      });
+
+      kissButton.addEventListener("click", function () {
+        loveMessage.textContent =
+          "A thousand kisses for you, my Ayesha! 😘💋❤️";
+
+        for (let i = 0; i < 10; i++) {
+          window.setTimeout(createFloatingHeart, i * 100);
+        }
+      });
+    })();
+  </script></body>
+</html>
